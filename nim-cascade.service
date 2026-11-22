@@ -1,0 +1,10 @@
+[Unit]
+Description=nim-cascade (fallback de modelos NVIDIA NIM)
+After=network.target docker.service
+
+[Service]
+ExecStart=%h/.local/bin/nim-cascade
+Restart=on-failure
+
+[Install]
+WantedBy=default.target
